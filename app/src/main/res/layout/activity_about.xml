@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/beginGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/guideLine" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/guideLine" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/aboutContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_layerlist"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/endGuideline"
+        app:layout_constraintStart_toStartOf="@id/beginGuideline"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/about_text_about_the_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aboutMarge"
+            android:text="@string/about_the_application"
+            android:textColor="@color/colorGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/about_text_application_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aboutMarge"
+            android:text="@string/application_name"
+            android:textColor="@color/colorGray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/about_text_about_the_app" />
+
+        <TextView
+            android:id="@+id/about_text_version_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aboutMarge"
+            android:text="@string/version_name"
+            android:textColor="@color/colorGray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/about_text_application_name" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aboutMarge"
+            android:text="@string/version_code"
+            android:textColor="@color/colorGray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/about_text_version_name" />
+
+        <TextView
+            android:id="@+id/about_text_application_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/aboutMargeTop"
+            android:text="@string/app_name"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/about_text_application_name"
+            app:layout_constraintTop_toBottomOf="@+id/about_text_about_the_app" />
+
+        <TextView
+            android:id="@+id/about_text_application_version_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/aboutMargeTop"
+            android:text="@string/default_text_about"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/about_text_application_name"
+            app:layout_constraintTop_toBottomOf="@+id/about_text_application_name_text" />
+
+        <TextView
+            android:id="@+id/about_text_application_version_code_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/aboutMargeTop"
+            android:text="@string/default_text_about"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/about_text_application_name"
+            app:layout_constraintTop_toBottomOf="@+id/about_text_application_version_text" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/about_btn_okBaton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aboutMarge"
+            android:background="@drawable/shape_background"
+            android:text="@string/about_btn_text_ok"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/about_text_application_version_code_text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

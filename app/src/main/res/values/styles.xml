@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="mainBtnStyle">
+        <item name="android:layout_width">@dimen/largeButtonWidth</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">@dimen/margeVertical</item>
+        <item name="android:background">@drawable/shape_background</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/largeText</item>
+    </style>
+</resources>

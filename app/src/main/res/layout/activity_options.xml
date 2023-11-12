@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OptionsActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/beginGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/guideLine" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/guideLine" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centerGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/optionsContainer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_layerlist"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/endGuideline"
+        app:layout_constraintStart_toStartOf="@id/beginGuideline"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/options_text_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aboutMarge"
+            android:text="@string/options_text_main"
+            android:textColor="@color/colorGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/options_text_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/aboutMarge"
+            android:text="@string/select_the_number_of_boxes"
+            android:textColor="@color/colorGray"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/options_text_main" />
+
+        <Spinner
+            android:id="@+id/options_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="@dimen/aboutMarge"
+            android:background="@drawable/background_layerlist"
+            app:layout_constraintTop_toBottomOf="@id/options_text_select"
+            app:layout_constraintBottom_toBottomOf="@id/optionsContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <CheckBox
+            android:id="@+id/options_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable timer"
+            app:layout_constraintBottom_toTopOf="@+id/options_spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/options_text_select"
+             />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="@dimen/smallMargeVertical"
+        android:id="@+id/options_btn_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_background"
+        android:text="@string/options_btn_cancel"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/centerGuideline"
+        app:layout_constraintStart_toStartOf="@+id/beginGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/optionsContainer" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_marginTop="@dimen/smallMargeVertical"
+        android:id="@+id/options_btn_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_background"
+        android:text="@string/options_btn_confirm"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@id/endGuideline"
+        app:layout_constraintStart_toStartOf="@+id/centerGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/optionsContainer" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

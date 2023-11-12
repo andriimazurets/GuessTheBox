@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="backgroundCorners">8dp</dimen>
+    <dimen name="largeText">20sp</dimen>
+    <dimen name="margeVertical">24dp</dimen>
+    <dimen name="largeMarginVertical">48dp</dimen>
+    <dimen name="fullMargin">20dp</dimen>
+    <dimen name="largeButtonWidth">200dp</dimen>
+    <dimen name="guideLine">24dp</dimen>
+    <dimen name="aboutMarge">12dp</dimen>
+    <dimen name="aboutMargeTop">12dp</dimen>
+    <dimen name="margeHorizontal">24dp</dimen>
+    <dimen name="smallMargeVertical">16dp</dimen>
+</resources>
