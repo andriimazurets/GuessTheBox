@@ -13,6 +13,15 @@
         android:theme="@style/Theme.GuessTheBox"
         tools:targetApi="31">
         <activity
+            android:name=".BoxActivity"
+            android:exported="false" />
+        <activity
+            android:name=".OpenBoxActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ActivityOpenBox"
+            android:exported="false" />
+        <activity
             android:name=".OpenBox"
             android:exported="false" />
         <activity

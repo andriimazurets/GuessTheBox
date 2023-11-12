@@ -37,6 +37,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun onOpenBoxPressed() {
+        val intent = Intent(this, OpenBoxActivity::class.java)
+        intent.putExtra(OpenBoxActivity.EXTRA_OPTIONS, options)
+        startActivity(intent)
     }
 
     private fun onOptionsPressed() {
