@@ -6,4 +6,40 @@
     android:layout_height="match_parent"
     tools:context=".BoxActivity">
 
+
+    <ImageView
+        android:layout_width="@dimen/width_check_box"
+        android:layout_height="@dimen/height_check_box"
+        android:src="@drawable/ic_check_correct"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="@string/correct_answer_box"
+        android:textSize="@dimen/bigText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/box_to_main_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginTop="@dimen/margeVertical"
+        android:text="@string/to_main_menu"
+        android:textColor="@color/white"
+        android:padding="@dimen/buttonPadding"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

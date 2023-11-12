@@ -2,11 +2,16 @@ package com.mazurets.guessthebox
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.mazurets.guessthebox.databinding.ActivityBoxBinding
+import com.mazurets.guessthebox.databinding.ActivityOpenBoxBinding
 
 class OpenBoxActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityOpenBoxBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_open_box)
+        binding = ActivityOpenBoxBinding.inflate(layoutInflater).also { setContentView(it.root) }
+
+
     }
 
     companion object {

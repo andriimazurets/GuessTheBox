@@ -11,4 +11,8 @@
     <dimen name="aboutMargeTop">12dp</dimen>
     <dimen name="margeHorizontal">24dp</dimen>
     <dimen name="smallMargeVertical">16dp</dimen>
+    <dimen name="buttonPadding">16dp</dimen>
+    <dimen name="bigText">28sp</dimen>
+    <dimen name="width_check_box">150dp</dimen>
+    <dimen name="height_check_box">150dp</dimen>
 </resources>
