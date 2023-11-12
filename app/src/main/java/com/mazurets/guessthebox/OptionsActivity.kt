@@ -26,7 +26,13 @@ class OptionsActivity : AppCompatActivity() {
         intent.getParcelableExtra(EXTRA_OPTIONS) ?:
         throw IllegalArgumentException ("You need to specify EXTRA_OPTIONS argument to launch this activity")
 
+        binding.optionsBtnCancel.setOnClickListener {
+            onCancelPressed()
+        }
 
+        binding.optionsBtnConfirm.setOnClickListener {
+            onConfirmPressed()
+        }
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
@@ -35,36 +41,6 @@ class OptionsActivity : AppCompatActivity() {
     }
 
     private fun setupSpinner () {
-        boxCountItems = (1..6).map { BoxCountItem(it, "$it boxes") }
-        adapter = ArrayAdapter(
-            this,
-            R.layout.item_spinner,
-            boxCountItems
-        )
-        adapter.setDropDownViewResource(android.R.layout.simple_list_item_1)
-
-        binding.optionsSpinner.adapter = adapter
-        binding.optionsSpinner.onItemSelectedListener = object: AdapterView.OnItemSelectedListener,
-            AdapterView.OnItemClickListener {
-            override fun onItemSelected(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
-                val count = boxCountItems[position].count
-                options = options.copy(boxCount = count)
-            }
-
-            override fun onNothingSelected(parent: AdapterView<*>?) {}
-            override fun onItemClick(
-                parent: AdapterView<*>?,
-                view: View?,
-                position: Int,
-                id: Long
-            ) {
-            }
-        }
     }
 
     private fun updateUi() {
