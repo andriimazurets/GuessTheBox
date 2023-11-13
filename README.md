@@ -1,4 +1,4 @@
-![image](https://github.com/andriimazurets/GuessTheBox/assets/127737896/8ce57a0c-0fa3-40d2-9cf3-04524de0a319)# Guess the box
+# Guess the box
 
 ## Android navigation
 
